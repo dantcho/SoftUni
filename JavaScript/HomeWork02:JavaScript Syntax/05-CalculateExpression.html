@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function calc() {
+            var textBox = document.getElementById('textBoxx').value;
+            var answer = document.getElementById('answerBox');
+            answer.value = eval(textBox);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Calculate Expression</title>
+</head>
+<body>
+<input type="text" id="textBoxx">
+<button onclick="calc()">
+   calc
+</button>
+<input type="text" id="answerBox">
+</body>
+</html>
