@@ -11,13 +11,14 @@ function tablePrint(input) {
     var output = [];
     output[0] = '<table>';
     output[1] = '<tr><th>Num</th><th>Square</th><th>Fib</th></tr>';
-    var start = input[0], end = input[1];
-    for (var i = 0; i <= (end - start) + 1; i++) {
-        var num = eval(start + i);
+    var startNum = input[0], endNum = input[1];
+    for (var i = 0; i <= (endNum - startNum) + 1; i++) {
+        var num = (parseInt(startNum) + parseInt(i));
         output[i + 2] = ('<tr><td>') + (num) + ('</td><td>') + (num * num) + ('</td><td>') + (isFibonachi(num) ? 'yes' : 'no' ) + ('</td></tr>');
     }
-    output[end - start + 3] = '</table>'
+    output[endNum - startNum + 3] = '</table>';
     for (var i = 0; i < output.length; i++) {
         console.log(output[i]);
     }
 }
+tablePrint([23, 27])
